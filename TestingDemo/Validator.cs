@@ -18,7 +18,7 @@ namespace TestingDemo
         /// <returns></returns>
         public static bool IsWithinRange(double min, double max, double numToCheck)
         {
-            if (numToCheck >= min &&  numToCheck <= max) 
+            if (numToCheck > min &&  numToCheck < max) 
                 return true;
 
             return true;
