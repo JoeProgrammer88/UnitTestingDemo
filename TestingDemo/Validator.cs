@@ -21,7 +21,7 @@ namespace TestingDemo
             if (numToCheck >= min &&  numToCheck <= max) 
                 return true;
 
-            return true;
+            return false;
         }
     }
 }

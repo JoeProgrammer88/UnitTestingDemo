@@ -12,6 +12,36 @@ namespace TestingDemo.Tests
     public class ValidatorTests
     {
         [TestMethod]
+        public void IsWithinRange_LowerThanMin_ReturnsFalse()
+        {
+            // Arrange
+            double min = 1.0;
+            double max = 10.0;
+            double numToCheck = 0;
+
+            // Act
+            bool result = Validator.IsWithinRange(min, max, numToCheck);
+
+            // Assert
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void Test_IsWithinRange_HigherThanMax_ReturnsFalse()
+        {
+            // Arrange
+            double min = 1.0;
+            double max = 10.0;
+            double numToCheck = 11;
+
+            // Act
+            bool result = Validator.IsWithinRange(min, max, numToCheck);
+
+            // Assert
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
         public void Test_IsWithinRange_EqualToMin_ReturnsTrue()
         {
             // Arrange
