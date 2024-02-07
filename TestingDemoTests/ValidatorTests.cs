@@ -12,7 +12,7 @@ namespace TestingDemo.Tests
     public class ValidatorTests
     {
         [TestMethod]
-        public void Test_IsWithinRange_LowerThanMin_ReturnsFalse()
+        public void IsWithinRange_LowerThanMin_ReturnsFalse()
         {
             // Arrange
             double min = 1.0;
